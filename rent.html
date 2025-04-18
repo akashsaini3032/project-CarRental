@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rental Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e3b4c, #223a44);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+  
+    .order-container {
+      width: 95%;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #0f1b2b;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0, 255, 195, 0.4);
+      animation: fadeInUp 1s ease-out;
+    }
+  
+    .order-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  
+    .order-nav a {
+      text-decoration: none;
+      color: #00d6e6;
+      background-color: #10222f;
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+  
+    .order-nav a:hover {
+      background-color: #00d6e6;
+      color: #0f1b2b;
+      transform: scale(1.05);
+    }
+  
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00ffc3;
+      text-shadow: 0 0 10px #00ffc3;
+      margin-bottom: 20px;
+    }
+  
+    .car-image {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      transition: transform 0.5s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 195, 0.3);
+    }
+  
+    .car-image:hover {
+      transform: scale(1.03);
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    input, select, textarea {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 10px;
+      background-color: #10222f;
+      color: #fff;
+      transition: 0.3s ease;
+      font-size: 1rem;
+    }
+  
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      background-color: #142e3f;
+      transform: scale(1.02);
+    }
+  
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+      color: #00d6e6;
+    }
+  
+    fieldset {
+      border: 1px solid #00d6e622;
+      border-radius: 10px;
+      padding: 10px;
+    }
+  
+    legend {
+      font-size: 1rem;
+      color: #00d6e6;
+    }
+  
+    textarea {
+      resize: vertical;
+    }
+  
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+  
+    .button-group button {
+      flex: 1;
+      margin: 5px;
+      padding: 12px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background-color: #00d6e6;
+      color: #0f1b2b;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00d6e6;
+    }
+  
+    .button-group button:hover {
+      background-color: #00ffc3;
+      color: #0f1b2b;
+      transform: scale(1.05);
+    }
+  
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+    @media (max-width: 600px) {
+      .button-group {
+        flex-direction: column;
+      }
+  
+      .button-group button {
+        width: 100%;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="order-container">
+    <div class="order-nav">
+      <a href="rentc.html">🏠 My Booking</a>
+      <a href="index.html">🔙 Go Back</a>
+    </div>
+
+    <h2>Book Your Ride</h2>
+
+    <img src="ph1.jpg" alt="Car Image" class="car-image" />
+
+    <form id="carOrderForm">
+      <input type="text" required placeholder="Full Name" />
+      <input type="email" required placeholder="Email" />
+      <input type="tel" required placeholder="Phone Number" />
+      <input type="text" required placeholder="Pickup Location" />
+      <input type="text" required placeholder="Drop-off Location" />
+
+      <label>Pickup Date & Time:</label>
+      <input type="datetime-local" required />
+
+      <label>Return Date & Time:</label>
+      <input type="datetime-local" required />
+
+      <select required>
+        <option value="">Select Car Type</option>
+        <option>Sedan</option>
+        <option>SUV</option>
+        <option>Hatchback</option>
+        <option>Luxury</option>
+      </select>
+
+      <fieldset>
+        <legend>Additional Services:</legend>
+        <label><input type="checkbox" /> GPS</label><br/>
+        <label><input type="checkbox" /> Child Seat</label><br/>
+        <label><input type="checkbox" /> Extra Insurance</label>
+      </fieldset>
+
+      <textarea placeholder="Any special requests? (optional)" rows="3"></textarea>
+
+      <div class="button-group">
+        <button type="submit">🚗 Book Now</button>
+        <button type="reset">❌ Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("carOrderForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("✅ Your car booking request has been submitted!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

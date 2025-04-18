@@ -1,0 +1,183 @@
+/* navbar css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Added */
+    z-index: 10; 
+    background-color:#0f1b3d ;       /* Added */
+  }
+  
+  .navbar .logo img {
+   max-height: 50px;
+  }
+  
+  .navbar .menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .menu ul li a {
+    text-decoration: none;
+    color: #00ffc3;
+  }
+  
+  .navbar .icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: #00ffc3;
+  }
+  
+  #click{
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    
+  }
+  
+  /* Mobile Navbar */
+  @media only screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+  
+    .navbar {
+        justify-content: space-between;
+        position: relative;
+        z-index: 10; /* Ensures navbar is on top */
+    }
+  
+    .menu {
+        display: none;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        text-align: center;
+        z-index: 1000; /* Added to bring menu in front */
+    }
+  
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+  
+    #click:checked ~ .navbar .menu {
+        display: block;
+    }
+  
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+    }
+  
+    .icons {
+        display: none;
+    }
+  }
+  
+  /* Tablet Navbar */
+  @media (min-width: 426px) and (max-width: 768px) {
+    .navbar {
+        padding: 8px 15px; 
+    }
+  
+    .navbar .logo img {
+        max-height: 40px; 
+    }
+  
+    .navbar .menu ul {
+        gap: 20px; 
+        font-size: 18px; 
+    }
+  
+    .navbar .icons {
+        gap: 40px; 
+        font-size: 40px; 
+    }
+  }
+  
+  /* navbar css */
+
+
+/* =================== GLOBAL CSS =================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('car2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* =================== LOGIN FORM WRAPPER =================== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* =================== LOGIN FORM STYLING =================== */
+#login {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Input fields */
+#login input[type="text"],
+#login input[type="password"],
+#login input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Placeholder */
+#login input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit button */
+#login-button {
+    background: #007BFF;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: bold;
+    color: white;
+}
+
+#login-button:hover {
+    background: #0056b3;
+}
+
+/* Labels */
+#login label {
+    color: #fff;
+    font-size: 14px;
+}

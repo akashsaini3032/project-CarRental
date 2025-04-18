@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+
+  <!--Navbar-->
+  <input type="checkbox" id="click">
+  <nav class="navbar">
+      <div class="logo">
+          <img src="logo.png" alt="Logo">
+      </div>
+      <div class="menu">
+          <ul>
+              <li> <a href="index.html">Home</a></li>
+              <li> <a href="signup.html">SignUp</a></li>
+              <li> <a href="login.html">Login</a></li>
+              <li> <a href="book.html">Book Car</a></li>
+              <li> <a href="order.html">Our Bookings</a></li>
+          </ul>
+      </div>
+      <section class="icons">
+          <i class="fa-solid fa-magnifying-glass search"></i>
+          <i class="fa-regular fa-heart heart"></i>
+          <i class="fa-solid fa-bag-shopping bag"></i>
+      </section>
+      <label for="click" class="menu-icon">
+          <i class="fa-solid fa-bars"></i>
+      </label>
+  </nav>
+   <!--Navbar-->
+   <br><br>
+
+
+   <form id="booking-form" action="">
+    <label for="name">Enter Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label for="age">Enter Age:</label>
+    <input type="number" id="age"><br><br>
+
+    <label for="aadhar">Enter AdharNo:</label>
+    <input type="text" id="aadhar"><br><br>
+
+    <label for="checkin">Enter CheckIn:</label>
+    <input type="date" id="checkin"><br><br>
+
+    <label for="checkout">Enter CheckOut:</label>
+    <input type="date" id="checkout"><br><br>
+
+    <label for="mobile">Enter Mobile:</label>
+    <input type="number" id="mobile"><br><br>
+
+    <label for="country">Choose Country:</label>
+    <select id="country">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Italy">Italy</option>
+    </select><br><br>
+
+    <label for="person">Enter Person:</label>
+    <input type="text" id="person"><br><br>
+
+    <input type="submit" value="Book Now" onclick="return book()">
+</form>
+
+
+
+  
+
+
+    <!-- <form action="">
+        Enter Name: <input type="text" id="name"><br><br>
+        Enter Age: <input type="number" id="age"><br><br>
+        Enter AdharNo: <input type="text" id="aadhar"><br><br>
+        Enter CheckIn: <input type="date" id="checkin"><br><br>
+        Enter CheckOut: <input type="date" id="checkout"><br><br>
+        Enter Mobile: <input type="number" id="mobile"><br><br>
+
+        Choose Country: <select  id="country">
+
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="China">China</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Italy">Italy</option>
+
+        </select>
+        <br><br>
+
+        Enter Person: <input type="text" id="person"><br><br>
+
+        <input type="submit" value="Book Now" onClick="return book()">
+
+
+    </form> -->
+
+    <br> <br> <br>
+ <footer>
+     <div class="footer">
+         <div class="footerColumn">
+             <h3>Contact Us</h3>
+             <p>Drou Demo Store</p>
+             <p>No. 1259 Freedom, New York</p>
+             <p>United States</p>
+             <p>+91-987654321</p>
+             <p>demo@exampledemo.com</p>
+         </div>
+         <div class="footerColumn">
+             <h3>Information</h3>
+             <a href="">Product Support</a>
+             <a href="">Checkout</a>
+             <a href="">License Policy</a>
+             <a href="">Affiliate</a>
+         </div>
+         <div class="footerColumn">
+             <h3>Customer Service</h3>
+             <a href="">Help Center</a>
+             <a href="">Redeem Voucher</a>
+             <a href="">Contact Us</a>
+             <a href="">Policies & Rules</a>
+         </div>
+         <div class="footerColumn">
+             <h3>Download Our App</h3>
+             <p>Download our App and get extra 15% Discount on your first Order..!</p>
+             <div class="appButtons">
+                 <img src="footer1.jpg" alt="Download on the App Store">
+                 <img src="footer2.jpg" alt="Get it on Google Play">
+             </div>
+         </div>
+     </div>
+     <div class="footerBottom">
+         <p>Copyright © Team90Degree | Built with Drou by Team90Degree.</p>
+         <div class="paymentOptions">
+             <img src="footer3.png" alt="Payment Options">
+         </div>
+     </div>
+ </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

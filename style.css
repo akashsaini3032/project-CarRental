@@ -1,0 +1,837 @@
+
+
+
+
+/* navbar css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* Added */
+  z-index: 10; 
+  background-color:#0f1b3d ;       /* Added */
+}
+
+.navbar .logo img {
+ max-height: 50px;
+}
+
+.navbar .menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu ul li a {
+  text-decoration: none;
+  color: #00ffc3;
+}
+
+.navbar .icons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  color: #00ffc3;
+}
+
+#click{
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  
+}
+
+/* Mobile Navbar */
+@media only screen and (max-width: 768px) {
+  html, body {
+      overflow-x: hidden;
+  }
+
+  .navbar {
+      justify-content: space-between;
+      position: relative;
+      z-index: 10; /* Ensures navbar is on top */
+  }
+
+  .menu {
+      display: none;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      text-align: center;
+      z-index: 1000; /* Added to bring menu in front */
+  }
+
+  .menu ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  #click:checked ~ .navbar .menu {
+      display: block;
+  }
+
+  .menu-icon {
+      display: block;
+      cursor: pointer;
+      font-size: 30px;
+  }
+
+  .icons {
+      display: none;
+  }
+}
+
+/* Tablet Navbar */
+@media (min-width: 426px) and (max-width: 768px) {
+  .navbar {
+      padding: 8px 15px; 
+  }
+
+  .navbar .logo img {
+      max-height: 40px; 
+  }
+
+  .navbar .menu ul {
+      gap: 20px; 
+      font-size: 18px; 
+  }
+
+  .navbar .icons {
+      gap: 40px; 
+      font-size: 40px; 
+  }
+}
+
+/* navbar css */
+
+
+
+/* First Slider CSS */
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* First Slider CSS */
+
+
+
+/* logo css */
+
+/* Independent Brand Section Styling */
+.brand-section {
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #333;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+.brand-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.brand-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.brand-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.brand-item:hover {
+  transform: translateY(-8px);
+}
+
+.brand-item:hover img {
+  transform: scale(1.1);
+}
+
+.brand-footer {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.brand-footer a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.brand-footer a:hover {
+  color: #003d80;
+}
+
+/* Responsive Handling */
+@media (max-width: 600px) {
+  .brand-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-item p {
+    font-size: 13px;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+}
+
+
+/* logo css */
+
+
+/* car slider css */
+
+.car-slider-section {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background-color: #f5f7fa;
+  overflow: hidden;
+}
+
+.car-slider-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.car-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+
+.car-card {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.car-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #34495e;
+}
+
+.car-price {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.offer-btn {
+  padding: 8px 16px;
+  border: 2px solid #1abc9c;
+  background-color: transparent;
+  color: #1abc9c;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offer-btn:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.slider-btn.left {
+  left: 0;
+}
+
+.slider-btn.right {
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  .car-card {
+    width: 80vw;
+  }
+}
+
+/* car slider css */
+
+
+
+/* car css */
+
+.rental-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .rental-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 40px;
+  }
+
+  .rental-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+  .rental-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
+  }
+
+  .rental-card:hover {
+    transform: translateY(-10px) rotateY(3deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .rental-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .rental-info {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .car-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 10px;
+  }
+
+  .car-rating {
+    color: #f1c40f;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .car-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 15px;
+  }
+
+  .book-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .book-btn:hover {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .rental-title {
+      font-size: 2rem;
+    }
+  }
+
+/* car css */
+
+/* 
+fuel calculator css */
+
+/* Fuel Calculator Container */
+.fuel-calculator-wrapper {
+  all: initial;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fuel-calculator {
+  background-color: #ffffff10;
+  border: 1px solid #ffffff22;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fuel-calculator h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.fuel-calculator label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+.fuel-calculator input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #ffffff15;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.fuel-calculator input:focus {
+  background-color: #ffffff25;
+}
+
+.fuel-calculator button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #00c853;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fuel-calculator button:hover {
+  background-color: #00e676;
+  transform: scale(1.05);
+}
+
+.fuel-calculator .result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* fuel calculator css */
+
+
+
+/* city css */
+
+/* === Scoped & Animated Styles for .city section === */
+.city {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  animation: fadeIn 1s ease-in;
+}
+
+.city > div {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 130px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.4s ease;
+  animation: bounceIn 0.8s ease;
+}
+
+.city > div:hover {
+  transform: translateY(-10px) scale(1.07);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.city > div img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.city > div:hover img {
+  transform: scale(1.12) rotate(1deg);
+}
+
+.city > div p {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.city > div:hover p {
+  color: #0077cc;
+}
+
+/* === Entrance Animation === */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 768px) {
+  .city > div {
+    width: 100px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .city {
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .city > div {
+    width: 80px;
+    padding: 8px;
+  }
+
+  .city > div p {
+    font-size: 13px;
+  }
+}
+
+
+/* city css */
+
+
+/* map css */
+
+ /* Independent section for map */
+ .map-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #fff3e0);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Stylish animated map box */
+.animated-map {
+  width: 90%;
+  max-width: 850px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 6px solid #03a9f4;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background: white;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s;
+  animation: fadeSlideIn 1s ease-in-out;
+}
+
+/* Hover animation */
+.animated-map:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  border-color: #ff5722;
+}
+
+/* Heading inside the map box */
+.animated-map h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #2e3c50;
+  background: linear-gradient(to right, #03a9f4, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px;
+  animation: bounceText 1.2s ease;
+}
+
+/* Embedded map */
+.animated-map iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+/* Text animation */
+@keyframes bounceText {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Entry animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .animated-map iframe {
+    height: 300px;
+  }
+
+  .animated-map h1 {
+    font-size: 22px;
+    margin: 15px 10px;
+  }
+}
+
+
+/* map css */
+
+
+
+
+/* Second slider css */
+/* Second Slider Styles */
+.mySecondSwiper {
+    width: 240px;
+    height: 320px;
+  }
+  
+  .mySecondSwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .mySecondSwiper .swiper-slide:nth-child(1n) {
+    background-color: rgb(100, 100, 100);
+  }
+  
+  .mySecondSwiper .swiper-slide:nth-child(2n) {
+    background-color: rgb(150, 150, 150);
+  }
+  
+  .mySecondSwiper .swiper-slide:nth-child(3n) {
+    background-color: rgb(200, 200, 200);
+  }
+  
+  .mySecondSwiper .swiper-slide:nth-child(4n) {
+    background-color: rgb(50, 50, 50);
+  }
+
+  /* second slider */
+
+
+
+
+
+
+
+  /* FOOTER CSS*/
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #0f1b3d    ;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+    
+  }
+  .footerColumn {
+    flex: 1;
+    margin: 0 10px;
+  }
+  .footerColumn h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    
+    color: #00ffc3;
+  }
+  .footerColumn p, .footerColumn a {
+    margin-bottom: 10px;
+    
+    color: #00ffc3;
+    text-decoration: none;
+  }
+  .footerColumn a:hover {
+    text-decoration: underline;
+  }
+  .footerBottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #0f1b3d     ;
+    font-size: 14px;
+    color: #00ffc3   ;
+  }
+  .appButtons img {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  
+  .paymentOptions img {
+    width: 400px;
+    margin-top: 10px;
+  }
+

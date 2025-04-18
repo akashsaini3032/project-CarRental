@@ -1,0 +1,530 @@
+body{
+  background-color: #00cbe6 ;
+  /* background-color:#0f1b3d ;  */
+}
+
+/* navbar css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* Added */
+  z-index: 10; 
+  background-color:#0f1b3d ;       /* Added */
+}
+
+.navbar .logo img {
+ max-height: 50px;
+}
+
+.navbar .menu ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu ul li a {
+  text-decoration: none;
+  color: #00ffc3;
+}
+
+.navbar .icons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  color: #00ffc3;
+}
+
+#click{
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  
+}
+
+/* Mobile Navbar */
+@media only screen and (max-width: 768px) {
+  html, body {
+      overflow-x: hidden;
+  }
+
+  .navbar {
+      justify-content: space-between;
+      position: relative;
+      z-index: 10; /* Ensures navbar is on top */
+  }
+
+  .menu {
+      display: none;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      text-align: center;
+      z-index: 1000; /* Added to bring menu in front */
+  }
+
+  .menu ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  #click:checked ~ .navbar .menu {
+      display: block;
+  }
+
+  .menu-icon {
+      display: block;
+      cursor: pointer;
+      font-size: 30px;
+  }
+
+  .icons {
+      display: none;
+  }
+}
+
+/* Tablet Navbar */
+@media (min-width: 426px) and (max-width: 768px) {
+  .navbar {
+      padding: 8px 15px; 
+  }
+
+  .navbar .logo img {
+      max-height: 40px; 
+  }
+
+  .navbar .menu ul {
+      gap: 20px; 
+      font-size: 18px; 
+  }
+
+  .navbar .icons {
+      gap: 40px; 
+      font-size: 40px; 
+  }
+}
+
+/* navbar css */
+
+/* Independent styling for .order only */
+.order {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    color: #ffffff;
+    overflow-x: auto;
+  }
+  
+  .order h1 {
+    text-align: center;
+    color: #00ffd5;
+    text-shadow: 2px 2px 8px #00ffd5;
+    margin-bottom: 20px;
+    animation: glowText 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glowText {
+    from {
+      text-shadow: 2px 2px 5px #00ffd5;
+    }
+    to {
+      text-shadow: 0 0 20px #00ffd5, 0 0 30px #00ffd5;
+    }
+  }
+  
+  .order table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a2e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
+    animation: borderPulse 4s infinite;
+  }
+  
+  @keyframes borderPulse {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(0, 255, 213, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(0, 255, 213, 0.7);
+    }
+  }
+  
+  .order th,
+  .order td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  .order th {
+    background: #00bcd4;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .order tbody tr {
+    background: #16213e;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .order tbody tr:hover {
+    background: #0f3460;
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0, 255, 213, 0.3);
+  }
+  
+  .order tbody td:hover {
+    color: #00ffd5;
+    background-color: #1e3c72;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  
+  /* Mobile Responsive */
+  @media screen and (max-width: 768px) {
+    .order table, 
+    .order thead, 
+    .order tbody, 
+    .order th, 
+    .order td, 
+    .order tr {
+      display: block;
+    }
+  
+    .order thead tr {
+      display: none;
+    }
+  
+    .order td {
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+    }
+  
+    .order td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #00ffd5;
+    }
+  }
+
+
+
+  /* book div css */
+
+
+  /* Independent and isolated styling for the animated form */
+.animated-form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    animation: glowFormBox 4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glowFormBox {
+    from {
+      box-shadow: 0 0 20px rgba(0, 255, 213, 0.2);
+    }
+    to {
+      box-shadow: 0 0 30px rgba(0, 255, 213, 0.6);
+    }
+  }
+  
+  .animated-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .animated-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00ffd5;
+    animation: labelGlow 2s infinite alternate;
+  }
+  
+  @keyframes labelGlow {
+    from {
+      text-shadow: 0 0 5px #00ffd5;
+    }
+    to {
+      text-shadow: 0 0 15px #00ffd5, 0 0 30px #00ffd5;
+    }
+  }
+  
+  .animated-form input[type="text"],
+  .animated-form input[type="number"],
+  .animated-form input[type="date"],
+  .animated-form select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #16213e;
+    color: #ffffff;
+    box-shadow: inset 0 0 8px rgba(0, 255, 213, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .animated-form input[type="text"]:focus,
+  .animated-form input[type="number"]:focus,
+  .animated-form input[type="date"]:focus,
+  .animated-form select:focus {
+    outline: none;
+    background-color: #1e3c72;
+    box-shadow: 0 0 10px rgba(0, 255, 213, 0.7);
+    transform: scale(1.02);
+  }
+  
+  .animated-form input[type="submit"] {
+    background: #00bcd4;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,255,213,0.3);
+    text-transform: uppercase;
+  }
+  
+  .animated-form input[type="submit"]:hover {
+    background-color: #00ffd5;
+    color: #16213e;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffd5, 0 0 40px #00ffd5;
+  }
+  
+  /* Responsive Styling */
+  @media screen and (max-width: 600px) {
+    .animated-form-container {
+      padding: 15px;
+    }
+  
+    .animated-form input,
+    .animated-form select {
+      font-size: 14px;
+    }
+  
+    .animated-form input[type="submit"] {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+  
+
+
+
+  /* book div css */
+
+
+
+
+  /* FOOTER CSS*/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #0f1b3d    ;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+  
+}
+.footerColumn {
+  flex: 1;
+  margin: 0 10px;
+}
+.footerColumn h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  
+  color: #00ffc3;
+}
+.footerColumn p, .footerColumn a {
+  margin-bottom: 10px;
+  
+  color: #00ffc3;
+  text-decoration: none;
+}
+.footerColumn a:hover {
+  text-decoration: underline;
+}
+.footerBottom {
+  text-align: center;
+  padding: 10px;
+  background-color: #0f1b3d     ;
+  font-size: 14px;
+  color: #00ffc3   ;
+}
+.appButtons img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+
+.paymentOptions img {
+  width: 400px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form css */
+
+#booking-form {
+  width: 90%;
+  max-width: 350px; /* Smaller size */
+  margin: 40px auto;
+  padding: 15px 20px;
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15), 0 10px 25px rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Form Hover */
+#booking-form:hover {
+  border: 2px solid #00f0ff;
+  box-shadow: 0 0 25px #00f0ff, 0 0 40px rgba(0, 255, 255, 0.3);
+  transform: scale(1.01);
+}
+
+/* Labels */
+#booking-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #00f0ff;
+  text-shadow: 0 0 4px #00f0ff;
+}
+
+/* Inputs & Selects */
+#booking-form input[type="text"],
+#booking-form input[type="number"],
+#booking-form input[type="date"],
+#booking-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 2px solid #00f0ff;
+  border-radius: 6px;
+  background: #0c1b2b;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+/* Input Focus */
+#booking-form input:focus,
+#booking-form select:focus {
+  outline: none;
+  border-color: #00ffff;
+  background: #112b3b;
+  box-shadow: 0 0 8px #00ffff;
+}
+
+/* Submit Button */
+#booking-form input[type="submit"] {
+  width: 100%;
+  background: #00f0ff;
+  color: #000;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00f0ff;
+  transition: 0.4s ease;
+}
+
+/* Submit Hover */
+#booking-form input[type="submit"]:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 25px #00ffff, 0 0 40px #00ffff;
+  transform: scale(1.03);
+}
+
+/* Entrance Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Mobile Friendly */
+@media (max-width: 480px) {
+  #booking-form {
+      padding: 15px;
+      max-width: 90%;
+  }
+
+  #booking-form input,
+  #booking-form select {
+      font-size: 13px;
+  }
+}
+
+
+/* form css */
+
+
+
+  
