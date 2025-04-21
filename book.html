@@ -145,28 +145,7 @@
  </footer>
     
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-      document.getElementById('booking-form').addEventListener('submit', function (e) {
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
-    
-        if (!isLoggedIn || isLoggedIn !== 'true') {
-          e.preventDefault(); // Stop form submission
-    
-          Swal.fire({
-            icon: 'warning',
-            title: 'Login Required',
-            text: 'Please log in before booking!',
-            confirmButtonColor: '#00f0ff'
-          });
-    
-          return false;
-        }
-    
-        // If logged in, allow form submission
-      });
-    </script>
+   
     
 </body>
 </html>
