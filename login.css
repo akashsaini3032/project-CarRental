@@ -54,12 +54,14 @@
         justify-content: space-between;
         position: relative;
         z-index: 10; /* Ensures navbar is on top */
+        
     }
   
     .menu {
         display: none;
         width: 100%;
-        background-color: white;
+        /* background-color: white; */
+        background-color:#0f1b3d ;
         position: absolute;
         top: 60px;
         right: 0;
@@ -74,12 +76,14 @@
   
     #click:checked ~ .navbar .menu {
         display: block;
+        color: #00ffc3;
     }
   
     .menu-icon {
         display: block;
         cursor: pointer;
         font-size: 30px;
+        color: #00ffc3;
     }
   
     .icons {
@@ -109,6 +113,9 @@
   }
   
   /* navbar css */
+  
+  
+  
 
 
 /* =================== GLOBAL CSS =================== */

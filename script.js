@@ -178,7 +178,7 @@ let FinalUpdate=(id)=>{
         )
      })
 
-     location.href="index.html"
+     location.href="order.html"
      return false
 
 }
